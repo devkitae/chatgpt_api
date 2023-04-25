@@ -1,0 +1,33 @@
+body {
+	font-size: xx-large;
+}
+
+.starter-template {
+	text-align: center;
+}
+
+input {
+	font-size: xx-large;
+	padding: 5px;
+	margin: 10px 20px;
+	border: inset;
+	width: 100%;
+}
+
+fieldset {
+	border: none;	
+}
+
+h1 {
+	color: #00498c;
+}
+
+h2 {
+	color: #000000;
+}
+
+.response_tb {
+	border: #00498c solid 1px;
+	margin: 10px 10px;
+	padding: 10px 10px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>ChatGPT & Spring demo</title>
+	<link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+	<main role="main" class="container">
+		<div class="logo-template">
+			<img src="img/open_logo.png" alt="오픈소스지원센터로그">
+		</div>
+		<div class="starter-template">
+			<h1>KT ds 오픈소스인프라팀<br/>CHAT-GPT API Test</h1>
+			<h2>Send message to ChatGPT</h2>
+			<form th:action="@{/}" method="post">
+			    <fieldset>
+			        <div class="form-group">
+			            <input type="text" name="prompt" th:value="${request}" required autofocus/>
+			        </div>
+			        <div class="row">
+			            <input type="submit" value="Send" />
+			        </div>
+			    </fieldset>
+			</form>
+			<h2 th:if="${response != null}" >ChatGPT responded with(500자 이내): </h2>
+			<div class="response_tb">
+				<p th:if="${response != null}" th:text="${response}" />
+			</div>
+
+		</div>
+	</main>
+</body>
+</html>
